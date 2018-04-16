@@ -58,7 +58,7 @@ mul.s $f16,$f6,$f10   #ac
 mul.s $f10,$f18,$f16 #4ac
 sub.s $f22,$f14,$f10 #b2-4ac
 mfc1 $t1,$f22
-blez $t1 complexRoot
+bltz $t1 complexRoot
 sqrt.s $f28,$f22 #sqrt(b2-4ac)
 add.s $f22,$f2,$f28 #-b+sqrt(b2-4ac)
 sub.s $f24,$f2,$f28 #-b-sqrt(b2-4ac)
